@@ -1,11 +1,19 @@
 import './App.css'
+import Navbar from './components/Navbar'
+// import other components
+// import { Switch, Route } from 'react-router-dom'
 
-function App() {
+export default function App() {
   return (
     <div className="App">
+      <Navbar />
     </div>
   )
 
 }
 
-export default App
+// <Switch>
+//   <Route exact path="/" component={IdeaContainer} />
+//   <Route exact path="/all" component={Ideas} />
+//   <Route exact path="/about" component={About} />
+// </Switch>

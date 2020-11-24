@@ -1,20 +1,22 @@
 import './App.css'
 import Navbar from './components/Navbar'
+import { Switch, Route } from 'react-router-dom'
+import Generator from './components/Generator'
 // import other components
-// import { Switch, Route } from 'react-router-dom'
 
-export default function App() {
+const App = () => {
   return (
     <div className="App">
       <Navbar />
-      
+
+      <Switch>
+        <Route exact path="/">
+          <Generator />
+        </Route>
+      </Switch>
     </div>
   )
 
 }
 
-// <Switch>
-//   <Route exact path="/" component={IdeaContainer} />
-//   <Route exact path="/all" component={Ideas} />
-//   <Route exact path="/about" component={About} />
-// </Switch>
+export default App

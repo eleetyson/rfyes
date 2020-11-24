@@ -3,7 +3,7 @@ import Idea from '../components/Idea'
 import { connect } from 'react-redux'
 import { fetchIdeas } from '../actions/ideas'
 
-class Index extends Component {
+class IdeasIndex extends Component {
 
 // using the fetchIdea action creator to get all ideas from the API
   componentDidMount() {
@@ -23,4 +23,4 @@ const mapStateToProps = ({ ideas, loading }) => {
   return { ideas, loading }
 }
 
-export default connect(mapStateToProps, {fetchIdeas})(Generator)
+export default connect(mapStateToProps, {fetchIdeas})(IdeasIndex)

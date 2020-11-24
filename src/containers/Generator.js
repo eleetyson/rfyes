@@ -6,7 +6,7 @@ import { fetchIdea } from '../actions/ideas'
 
 class Generator extends Component {
 
-// using the fetchIdea action creator to get a random idea from the API
+// using the fetchIdea action creator to get an idea from the API
   componentDidMount() {
     this.props.fetchIdea()
   }

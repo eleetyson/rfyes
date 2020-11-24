@@ -13,7 +13,7 @@ export default function ideasReducer(state = {ideas: [], loading: false}, action
     case 'SHOW_IDEA':
       return {
         ...state,
-        ideas: [...state.ideas, payload],
+        ideas: [...state.ideas, action.payload],
         loading: false
       }
 

@@ -1,24 +1,10 @@
-import React, { Component } from 'react'
-import { connect } from 'react-redux'
-import fetchIdea from '../actions/ideas'
+import React from 'react'
 
-class Idea extends Component {
-
-  // use the fetchIdea action creator to get a random idea from the API
-  componentDidMount() {
-    this.props.fetchIdea()
-  }
-
-  render() {
-    return (
-
-    )
-  }
+const Idea = props => {
+  return (
+    <p>Hi</p>
+  )
 
 }
 
-const mapStateToProps = state => {
-
-}
-
-export default connect(mapStateToProps, {fetchIdea})(Idea)
+export default Idea

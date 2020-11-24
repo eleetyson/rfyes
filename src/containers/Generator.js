@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Loading from '../components/Loading'
 import Idea from '../components/Idea'
 import Instruction from '../components/Instruction'
 import { connect } from 'react-redux'
@@ -20,9 +21,9 @@ class Generator extends Component {
     }
   }
 
-// returns a loading message
+// returns the component for the loading animation
   renderContentLoading() {
-    return <p> Loading... </p>
+    return <Loading />
   }
 
 // returns a card component once fetch is completed successfully

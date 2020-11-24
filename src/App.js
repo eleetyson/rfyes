@@ -2,7 +2,7 @@ import './App.css'
 import Navbar from './components/Navbar'
 import { Switch, Route } from 'react-router-dom'
 import Generator from './containers/Generator'
-import IdeasIndex from './containers/Index'
+import IdeasIndex from './containers/IdeasIndex'
 // import about page component
 
 const App = () => {

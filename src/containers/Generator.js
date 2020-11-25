@@ -24,10 +24,15 @@ class Generator extends Component {
     window.removeEventListener('keyup', this.handleKeyUp)
   }
 
-// when user hits 'Enter'...
+// when user hits 'Enter',
+// change state to indicated keyboard shortcut activated
+// and invoke functions to clear redux store and fetch new idea
   handleKeyUp(event) {
     if (event.key === 'Enter' && window.location.href.split('/').slice(-1)[0] === '') {
       this.setState({ active: true })
+      this.clearIdeas()
+      this.getIdea()
+      this.setState({ active: false })
     }
   }
 

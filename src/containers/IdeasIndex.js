@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Loading from '../components/Loading'
 import Idea from '../components/Idea'
 import { connect } from 'react-redux'
 import { fetchIdeas } from '../actions/ideas'

@@ -7,9 +7,14 @@ import { fetchIdea,  resetIdeas } from '../actions/ideas'
 
 class Generator extends Component {
 
+// invoked immediately after component mounts
+  componentDidMount() {
+    this.clearStateAndFetchIdea()
+  }
+
 // after clearing out any existing ideas from redux store
 // using the fetchIdea action creator to get an idea from the API
-  componentDidMount() {
+  clearStateAndFetchIdea() {
     this.props.resetIdeas()
     this.props.fetchIdea()
   }

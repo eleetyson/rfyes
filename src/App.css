@@ -38,26 +38,24 @@ a.btn-primary:link,
 a.btn-warning:link {
   font-size: 1rem;
   font-weight: 700;
+  padding: 2rem;
 }
 
 a.btn-info:hover { background-color: #0d95e8; }
 a.btn-primary:hover { background-color: #1e48ff; }
 a.btn-warning:hover { background-color: #ece159; }
 
-/* style Twitter link button */
-.btn-info {
-  background-color: #1da1f2;
-  border-radius: 4px;
+.btn-info,
+.btn-primary,
+.btn-warning {
+  border-radius: 0.2rem;
 }
+
+/* style Twitter link button */
+.btn-info { background-color: #1da1f2; }
 
 /* style RFS 100 newsletter link button */
-.btn-primary {
-  background-color: #0433ff;
-  border-radius: 4px;
-}
+.btn-primary { background-color: #0433ff; }
 
 /* style My First Million episode link button */
-.btn-warning {
-  background-color: #e8da30;
-  border-radius: 4px;
-}
+.btn-warning { background-color: #e8da30; }

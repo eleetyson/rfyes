@@ -32,9 +32,8 @@ export function addIdea(idea) {
 }
 
 // clearing out ideas from state
-// for when user moves from the index to the generator
 export function resetIdeas() {
   return (dispatch) => {
-    dispatch({ type: 'RESET_IDEAS' })
+    dispatch({ type: 'LOADING' })
   }
 }

@@ -7,15 +7,26 @@ import { fetchIdea,  resetIdeas } from '../actions/ideas'
 
 class Generator extends Component {
 
+// callback adds a keyboard shortcut for new idea generation
+  // handleKeyDown(event) {
+  //   if (event.key === 'Enter') {
+  //     this.props.resetIdeas()
+  //   }
+  // }
+
 // invoked immediately after component mounts
   componentDidMount() {
-    this.clearStateAndFetchIdea()
+    this.clearIdeas()
+    this.getIdea()
   }
 
-// after clearing out any existing ideas from redux store
-// using the fetchIdea action creator to get an idea from the API
-  clearStateAndFetchIdea() {
+// clearing out any existing ideas from redux store
+  clearIdeas() {
     this.props.resetIdeas()
+  }
+
+// using the fetchIdea action creator to get an idea from the API
+  getIdea() {
     this.props.fetchIdea()
   }
 

@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import Loading from '../components/Loading'
-import Filter from '../components/Filter'
 import Idea from '../components/Idea'
 import { connect } from 'react-redux'
 import { fetchIdeas, resetIdeas } from '../actions/ideas'
@@ -34,13 +33,28 @@ class IdeasIndex extends Component {
     return <Loading />
   }
 
-// returns a filter component and all idea cards upon completion of fetch
+// invokes renderFilter() and returns all idea cards upon completion of fetch
   renderContent() {
     return (
       <>
-        <Filter />
-        { this.props.ideas.map(idea => <Idea idea={idea} key={idea.id} id={idea.id} />) }
+        {this.renderFilterSelect()}
+        {this.props.ideas.map(idea => <Idea idea={idea} key={idea.id} id={idea.id} />) }
       </>
+    )
+  }
+
+//
+  renderFilterSelect() {
+    return (
+      <form className="form-inline justify-content-end w-75 mb-5">
+        <label className="pr-2">Filter: </label>
+        <select className="form-control">
+          <option defaultValue>All</option>
+          <option value="twitter">Twitter threads</option>
+          <option value="rfs">RFS 100 newsletter</option>
+          <option value="mfm">My First Million podcast</option>
+        </select>
+      </form>
     )
   }
 
@@ -60,3 +74,19 @@ const mapStateToProps = ({ ideas, loading }) => {
 }
 
 export default connect(mapStateToProps, {fetchIdeas, resetIdeas})(IdeasIndex)
+
+
+// returns a filter cop
+  // renderFilter() {
+  //   return (
+  //     <form className="form-inline justify-content-end w-75 mb-5">
+  //       <label className="pr-2">Filter: </label>
+  //       <select className="form-control" onChange={this.handleChange}>
+  //         <option defaultValue>All</option>
+  //         <option value="twitter">Twitter threads</option>
+  //         <option value="rfs">RFS 100 newsletter</option>
+  //         <option value="mfm">My First Million podcast</option>
+  //       </select>
+  //     </form>
+  //   )
+  // }

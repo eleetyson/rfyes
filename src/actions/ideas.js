@@ -1,6 +1,12 @@
 // fetching all ideas to render on index page
 // display loading state until fetch successful
-export function fetchIdeas() {
+export function fetchIdeas(type = 'all') {
+
+  const options = {
+    method: "GET",
+    headers: {"Content-Type": "application/json", "Accept": "application/json"},
+    body: JSON.stringify({ type })
+  }
 
   return (dispatch) => {
   dispatch({ type: 'LOADING' })

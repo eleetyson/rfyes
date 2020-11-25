@@ -18,17 +18,24 @@ class Generator extends Component {
   componentDidMount() {
     this.clearIdeas()
     this.getIdea()
+    window.addEventListener("keyup", this.handleKeyUp)
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('keyup', this.handleKeyUp)
+  }
+
+  handleKeyUp(event) {
+    if (event.key === 'Enter' && window.location.href.split('/').slice(-1)[0] === '') {
+      console.log(event.key)
+    }
   }
 
 // clearing out any existing ideas from redux store
-  clearIdeas() {
-    this.props.resetIdeas()
-  }
+  clearIdeas() { this.props.resetIdeas() }
 
 // using the fetchIdea action creator to get an idea from the API
-  getIdea() {
-    this.props.fetchIdea()
-  }
+  getIdea() { this.props.fetchIdea() }
 
 // display loading message until fetch is completed
   renderContentConditional() {
@@ -40,9 +47,7 @@ class Generator extends Component {
   }
 
 // returns the component for the loading animation
-  renderContentLoading() {
-    return <Loading />
-  }
+  renderContentLoading() { return <Loading /> }
 
 // returns a card component once fetch is completed successfully
   renderContent() {

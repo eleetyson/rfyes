@@ -13,14 +13,10 @@ class IdeasIndex extends Component {
   }
 
 // clearing out any existing ideas from redux store
-  clearIdeas() {
-    this.props.resetIdeas()
-  }
+  clearIdeas() { this.props.resetIdeas() }
 
 // using the fetchIdeas action creator to get an idea from the API
-  getIdeas() {
-    this.props.fetchIdeas()
-  }
+  getIdeas() { this.props.fetchIdeas() }
 
 // display loading message until fetch is completed
   renderContentConditional() {
@@ -58,4 +54,4 @@ const mapStateToProps = ({ ideas, loading }) => {
   return { ideas, loading }
 }
 
-export default connect(mapStateToProps, {fetchIdeas})(IdeasIndex)
+export default connect(mapStateToProps, {fetchIdeas, resetIdeas})(IdeasIndex)

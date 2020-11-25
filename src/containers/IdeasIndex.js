@@ -2,12 +2,23 @@ import React, { Component } from 'react'
 import Loading from '../components/Loading'
 import Idea from '../components/Idea'
 import { connect } from 'react-redux'
-import { fetchIdeas } from '../actions/ideas'
+import { fetchIdeas, resetIdeas } from '../actions/ideas'
 
 class IdeasIndex extends Component {
 
-// using the fetchIdea action creator to get all ideas from the API
+// invoked immediately after component mounts
   componentDidMount() {
+    this.clearIdeas()
+    this.getIdeas()
+  }
+
+// clearing out any existing ideas from redux store
+  clearIdeas() {
+    this.props.resetIdeas()
+  }
+
+// using the fetchIdeas action creator to get an idea from the API
+  getIdeas() {
     this.props.fetchIdeas()
   }
 

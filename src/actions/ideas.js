@@ -24,7 +24,7 @@ export function fetchIdea() {
 
 }
 
-// creating an idea
+// creating an idea (TODO)
 export function addIdea(idea) {
   return {
 

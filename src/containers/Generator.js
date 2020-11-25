@@ -3,9 +3,14 @@ import Loading from '../components/Loading'
 import Idea from '../components/Idea'
 import Instruction from '../components/Instruction'
 import { connect } from 'react-redux'
-import { fetchIdea,  resetIdeas } from '../actions/ideas'
+import { fetchIdea, resetIdeas } from '../actions/ideas'
 
 class Generator extends Component {
+  constructor() {
+    super()
+    this.state = { active: false }
+    this.handleKeyUp = this.handleKeyUp.bind(this)
+  }
 
 // invoked immediately after component mounts
   componentDidMount() {
@@ -22,7 +27,7 @@ class Generator extends Component {
 // when user hits 'Enter'...
   handleKeyUp(event) {
     if (event.key === 'Enter' && window.location.href.split('/').slice(-1)[0] === '') {
-      console.log(event.key)
+      this.setState({ active: true })
     }
   }
 
@@ -55,7 +60,7 @@ class Generator extends Component {
     return (
       <div className="container col-xl-8 col-lg-10 col-md-10 col-sm-10 col-xs-10  offset-2  py-5 my-xl-5 my-lg-5 my-md-5 my-sm-4 my-xs-4">
         {this.renderContentConditional()}
-        <Instruction />
+        <Instruction active={this.state.active} />
       </div>
     )
   }
@@ -63,8 +68,8 @@ class Generator extends Component {
 }
 
 // enabling Generator component to access ideas and loading from state in redux store
-const mapStateToProps = ({ ideas, loading }) => {
-  return { ideas, loading }
+const mapStateToProps = ({ ideas, loading, active }) => {
+  return { ideas, loading, active }
 }
 
 // connecting component to redux store

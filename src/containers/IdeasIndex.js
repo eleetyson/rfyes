@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Loading from '../components/Loading'
+import Filter from '../components/Filter'
 import Idea from '../components/Idea'
 import { connect } from 'react-redux'
 import { fetchIdeas, resetIdeas } from '../actions/ideas'
@@ -33,10 +34,13 @@ class IdeasIndex extends Component {
     return <Loading />
   }
 
-// returns a card component once fetch is completed successfully
+// returns a filter component and all idea cards upon completion of fetch
   renderContent() {
     return (
-      this.props.ideas.map(idea => <Idea idea={idea} key={idea.id} id={idea.id} />)
+      <>
+        <Filter />
+        { this.props.ideas.map(idea => <Idea idea={idea} key={idea.id} id={idea.id} />) }
+      </>
     )
   }
 

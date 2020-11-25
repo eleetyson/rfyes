@@ -2,15 +2,18 @@ import React, { Component } from 'react'
 import Loading from '../components/Loading'
 import Idea from '../components/Idea'
 import { connect } from 'react-redux'
-import { fetchIdeas, resetIdeas } from '../actions/ideas'
+import { fetchIdeas, fetchFilteredIdeas, resetIdeas } from '../actions/ideas'
 
 class IdeasIndex extends Component {
+  constructor() {
+    super()
+    this.state = { filter: 'all' }
+  }
 
 // invoked immediately after component mounts
   componentDidMount() {
     this.clearIdeas()
     this.getIdeas()
-    // window.addEventListener("keyup", this.handleKeyUp)
   }
 
 // clearing out any existing ideas from redux store
@@ -37,30 +40,31 @@ class IdeasIndex extends Component {
   renderContent() {
     return (
       <>
-        {this.renderFilterSelect()}
         {this.props.ideas.map(idea => <Idea idea={idea} key={idea.id} id={idea.id} />) }
       </>
     )
   }
 
-//
-  renderFilterSelect() {
-    return (
-      <form className="form-inline justify-content-end w-75 mb-5">
-        <label className="pr-2">Filter: </label>
-        <select className="form-control">
-          <option defaultValue>All</option>
-          <option value="twitter">Twitter threads</option>
-          <option value="rfs">RFS 100 newsletter</option>
-          <option value="mfm">My First Million podcast</option>
-        </select>
-      </form>
-    )
+// callback function updates local state and fetches ideas based on user selection
+  handleChange = event => {
+    this.setState({ filter: event.target.value })
+    this.props.fetchFilteredIdeas(event.target.value)
   }
 
   render() {
     return (
       <div className="container col-xl-8 col-lg-10 col-md-10 col-sm-10 col-xs-10  offset-2  py-5 my-xl-5 my-lg-5 my-md-5 my-sm-4 my-xs-4">
+
+        <form className="form-inline justify-content-end w-75 mb-5">
+          <label className="pr-2">Filter: </label>
+          <select className="form-control" value={this.state.filter} onChange={this.handleChange}>
+            <option value='all'>All</option>
+            <option value="twitter">Twitter threads</option>
+            <option value="rfs">RFS 100 newsletter</option>
+            <option value="mfm">My First Million podcast</option>
+          </select>
+        </form>
+        
         {this.renderContentConditional()}
       </div>
     )
@@ -73,10 +77,9 @@ const mapStateToProps = ({ ideas, loading }) => {
   return { ideas, loading }
 }
 
-export default connect(mapStateToProps, {fetchIdeas, resetIdeas})(IdeasIndex)
+export default connect(mapStateToProps, {fetchIdeas, fetchFilteredIdeas, resetIdeas})(IdeasIndex)
 
 
-// returns a filter cop
   // renderFilter() {
   //   return (
   //     <form className="form-inline justify-content-end w-75 mb-5">

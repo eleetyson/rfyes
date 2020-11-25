@@ -7,13 +7,6 @@ import { fetchIdea,  resetIdeas } from '../actions/ideas'
 
 class Generator extends Component {
 
-// callback adds a keyboard shortcut for new idea generation
-  // handleKeyDown(event) {
-  //   if (event.key === 'Enter') {
-  //     this.props.resetIdeas()
-  //   }
-  // }
-
 // invoked immediately after component mounts
   componentDidMount() {
     this.clearIdeas()
@@ -21,10 +14,12 @@ class Generator extends Component {
     window.addEventListener("keyup", this.handleKeyUp)
   }
 
+// invoked just before component is unmounted
   componentWillUnmount() {
     window.removeEventListener('keyup', this.handleKeyUp)
   }
 
+// when user hits 'Enter'...
   handleKeyUp(event) {
     if (event.key === 'Enter' && window.location.href.split('/').slice(-1)[0] === '') {
       console.log(event.key)

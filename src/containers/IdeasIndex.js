@@ -10,6 +10,7 @@ class IdeasIndex extends Component {
   componentDidMount() {
     this.clearIdeas()
     this.getIdeas()
+    // window.addEventListener("keyup", this.handleKeyUp)
   }
 
 // clearing out any existing ideas from redux store

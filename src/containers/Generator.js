@@ -3,12 +3,14 @@ import Loading from '../components/Loading'
 import Idea from '../components/Idea'
 import Instruction from '../components/Instruction'
 import { connect } from 'react-redux'
-import { fetchIdea } from '../actions/ideas'
+import { fetchIdea,  resetIdeas } from '../actions/ideas'
 
 class Generator extends Component {
 
+// after clearing out any existing ideas from redux store
 // using the fetchIdea action creator to get an idea from the API
   componentDidMount() {
+    this.props.resetIdeas()
     this.props.fetchIdea()
   }
 
@@ -51,4 +53,4 @@ const mapStateToProps = ({ ideas, loading }) => {
 
 // connecting component to redux store
 // redux state and fetchIdea() action creator will be available through props
-export default connect(mapStateToProps, {fetchIdea})(Generator)
+export default connect(mapStateToProps, {fetchIdea, resetIdeas})(Generator)

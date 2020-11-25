@@ -24,6 +24,8 @@ export default function ideasReducer(state = {ideas: [], loading: false}, action
     case 'ADD_IDEA':
       // return
 
+    case 'RESET_IDEAS':
+      return { ideas: [], loading: false }
 
     default:
       return state

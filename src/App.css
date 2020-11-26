@@ -20,6 +20,10 @@ body {
   box-shadow: 4px 4px 0 black;
 }
 
+.box-shadow-colorful {
+  box-shadow: blue 0px 0px 0px 2px inset, rgb(255, 255, 255) 10px -10px 0px -3px, rgb(31, 193, 27) 10px -10px, rgb(255, 255, 255) 20px -20px 0px -3px, rgb(255, 217, 19) 20px -20px, rgb(255, 255, 255) 30px -30px 0px -3px, rgb(255, 85, 85) 30px -30px;
+}
+
 .bg-transparent {
   background-color: #f3f3f3;
   color: rgba(0, 0, 0, 0.7);
@@ -63,3 +67,9 @@ a.btn-warning:hover { background-color: #ece159; }
 
 /* style My First Million episode link button */
 .btn-warning { background-color: #e8da30; }
+
+/* style about page links */
+p a:hover {
+  text-decoration: underline;
+  color: #00a6ff;
+}

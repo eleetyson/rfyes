@@ -13,7 +13,7 @@ const About = () => {
           <p class="lead pb-3">These are locally sourced, non-GMO ideas from the <a href="https://thehustle.co/my-first-million-podcast/" target="_blank" rel="noopener noreferrer">My First Million podcast</a>, <a href="https://rfs100.com/" target="_blank" rel="noopener noreferrer">RFS 100 newsletter</a>, and disparate Twitter threads. None of them are mine!</p>
 
           <h2 className="py-2">How can I submit an idea?</h2>
-          <p class="lead">Feel free to <a href="mailto:eleetyson@gmail.com?subject=👋&body=Hey Ethan - here's my idea...">let me know</a> why this <del>sucks</del> is your favorite website.</p>
+          <p class="lead">Feel free to <a href="mailto:eleetyson@gmail.com?subject=👋&body=Hey Ethan - here's my idea...">email me</a> or use the form below.</p>
         </div>
       </div>
 

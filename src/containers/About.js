@@ -1,3 +1,4 @@
+// about page renders a brief app description and form for idea submission 
 import React from 'react'
 import Description from '../components/Description'
 import Form from '../components/Form'

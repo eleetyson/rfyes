@@ -40,9 +40,20 @@ export function fetchIdea() {
 
 // creating an idea (TODO)
 export function addIdea(idea) {
-  return {
 
+  const options = {
+    method: "POST",
+    headers: {"Content-Type": "application/json", "Accept": "application/json"},
+    body: JSON.stringify({idea})
   }
+
+  fetch(`${URL}/ideas`, options)
+  // return (dispatch) => {
+  //   fetch(`${URL}/ideas`, options)
+  //   .then(response => response.json())
+  //   .then(idea => dispatch({ type: 'ADD_IDEA', payload: idea }) )
+  // }
+
 }
 
 // clearing out ideas from state

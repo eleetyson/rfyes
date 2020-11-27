@@ -55,6 +55,7 @@ a.btn-warning:link {
   font-size: 1rem;
   font-weight: 700;
   padding: 2rem;
+  letter-spacing: 0.6px;
 }
 
 a.btn-info:hover { background-color: #0d95e8; }

@@ -16,10 +16,10 @@ class Form extends Component {
     })
   }
 
-// 
+//
   handleSubmit = event => {
     event.preventDefault()
-
+    this.props.addIdea(this.state)
     // this.setState({ title: '', content: '', link: '' })
   }
 

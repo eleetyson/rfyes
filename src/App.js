@@ -1,3 +1,4 @@
+// top-level component always renders nav bar and and a component depending on route
 import './App.css'
 import Navbar from './components/Navbar'
 import { Switch, Route } from 'react-router-dom'

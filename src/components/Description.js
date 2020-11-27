@@ -1,6 +1,7 @@
+// brief description of the app
 import React from 'react'
 
-const AboutDescription = () => {
+const Description = () => {
   return (
     <div className="card w-75 box-shadow mt-3 mb-5">
       <div className="card-body mx-xl-5 mx-lg-5 mx-md-2 mx-sm-1 mx-xs-1 py-xl-3 py-lg-3 my-xl-3 my-lg-3">

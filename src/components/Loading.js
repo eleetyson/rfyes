@@ -1,3 +1,4 @@
+// rendering the three dots animation to indicate loading state
 import React from 'react'
 import LottieAnimation from '../Lottie'
 import home from '../animations/loading.json'
@@ -8,7 +9,7 @@ const Loading = () => {
       <LottieAnimation lotti={home} height={300} width={300} />
     </div>
   )
-  
+
 }
 
 export default Loading

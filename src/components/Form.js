@@ -1,6 +1,7 @@
+// controlled form component for idea submission on About page
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-// import { addIdea } from '../actions/ideas'
+import { addIdea } from '../actions/ideas'
 
 class Form extends Component {
   constructor() {
@@ -8,14 +9,18 @@ class Form extends Component {
     this.state = { title: '', content: '', link: '' }
   }
 
+// updating local state with user input
   handleChange = event => {
     this.setState({
       [event.target.name]: event.target.value
     })
   }
 
+// 
   handleSubmit = event => {
     event.preventDefault()
+
+    // this.setState({ title: '', content: '', link: '' })
   }
 
   render() {
@@ -61,5 +66,4 @@ class Form extends Component {
 
 }
 
-export default Form
-// export default connect(null, {addIdea})(Form)
+export default connect(null, {addIdea})(Form)

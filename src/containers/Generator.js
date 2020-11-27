@@ -1,3 +1,4 @@
+// renders a loading animation until a random idea is fetched and displayed on a card
 import React, { Component } from 'react'
 import Loading from '../components/Loading'
 import Idea from '../components/Idea'

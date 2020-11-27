@@ -1,3 +1,4 @@
+// rendering a filterable list of all ideas
 import React, { Component } from 'react'
 import Loading from '../components/Loading'
 import Idea from '../components/Idea'

@@ -78,18 +78,3 @@ const mapStateToProps = ({ ideas, loading }) => {
 }
 
 export default connect(mapStateToProps, {fetchIdeas, fetchFilteredIdeas, resetIdeas})(IdeasIndex)
-
-
-  // renderFilter() {
-  //   return (
-  //     <form className="form-inline justify-content-end w-75 mb-5">
-  //       <label className="pr-2">Filter: </label>
-  //       <select className="form-control" onChange={this.handleChange}>
-  //         <option defaultValue>All</option>
-  //         <option value="twitter">Twitter threads</option>
-  //         <option value="rfs">RFS 100 newsletter</option>
-  //         <option value="mfm">My First Million podcast</option>
-  //       </select>
-  //     </form>
-  //   )
-  // }

@@ -102,6 +102,11 @@ p a:hover {
 }
 
 .form-group textarea {
-  height: 16rem;
+  height: 12rem;
   resize: none;
+}
+
+/* styling idea submission card */
+.card-special {
+  background: #f3f3f3;
 }

@@ -1,6 +1,5 @@
 // rendering a filterable list of all ideas
 import React, { Component } from 'react'
-import Loading from '../components/Loading'
 import Idea from '../components/Idea'
 import { connect } from 'react-redux'
 import { fetchIdeas, fetchFilteredIdeas, resetIdeas } from '../actions/ideas'
@@ -23,21 +22,7 @@ class IdeasIndex extends Component {
 // using the fetchIdeas action creator to get an idea from the API
   getIdeas() { this.props.fetchIdeas() }
 
-// display loading message until fetch is completed
-  renderContentConditional() {
-    if (this.props.loading) {
-      return this.renderContentLoading()
-    } else {
-      return this.renderContent()
-    }
-  }
-
-// returns the component for the loading animation
-  renderContentLoading() {
-    return <Loading />
-  }
-
-// invokes renderFilter() and returns all idea cards upon completion of fetch
+// returns all idea cards upon completion of fetch
   renderContent() {
     return (
       <>
@@ -67,7 +52,7 @@ class IdeasIndex extends Component {
           </select>
         </form>
 
-        {this.renderContentConditional()}
+        {this.renderContent()}
       </div>
     )
   }

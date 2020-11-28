@@ -2,10 +2,8 @@
 import './App.css'
 import Navbar from './components/Navbar'
 import { Route } from 'react-router-dom'
-
 import TransitionSwitch from 'react-router-transition-switch'
 import Fader from 'react-fader'
-
 import Generator from './containers/Generator'
 import IdeasIndex from './containers/IdeasIndex'
 import About from './containers/About'

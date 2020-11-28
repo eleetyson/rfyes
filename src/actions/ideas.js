@@ -21,6 +21,7 @@ export function fetchFilteredIdeas(type = 'all') {
   fetch(`${URL}/${type}`)
     .then(response => response.json())
     .then(ideas => dispatch({ type: 'SHOW_IDEAS', payload: ideas }) )
+    // .catch(err => alert())
   }
 
 }

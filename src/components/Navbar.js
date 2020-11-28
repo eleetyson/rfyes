@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
     <nav className="navbar navbar-light bg-white border-bottom">
       <NavLink to="/" className="navbar-brand pl-xl-5 pl-lg-5 pl-md-5 pl-sm-1 pl-xs-1  ml-xl-3 ml-lg-3 ml-md-3">
-        Logo here
+         <img src="/logo.png" height="25" width="25" alt="RF Yes logo"></img>
       </NavLink>
 
       <div className="navbar-nav ml-auto flex-row">

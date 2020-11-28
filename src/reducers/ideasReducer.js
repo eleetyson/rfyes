@@ -1,4 +1,4 @@
-export default function ideasReducer(state = {ideas: [], loading: false}, action) {
+export default function ideasReducer(state = {ideas: [], loading: false, message: null}, action) {
   switch(action.type) {
     case 'LOADING':
       return { ...state, ideas: [], loading: true }
@@ -7,7 +7,8 @@ export default function ideasReducer(state = {ideas: [], loading: false}, action
       return {
         ...state,
         ideas: action.payload,
-        loading: false
+        loading: false,
+        message: null
       }
 
     case 'SHOW_IDEA':
@@ -15,10 +16,11 @@ export default function ideasReducer(state = {ideas: [], loading: false}, action
         ...state,
         ideas: [...state.ideas, action.payload],
         loading: false,
+        message: null
       }
 
     case 'ADD_IDEA':
-      // return state
+      return { ...state, message: action.payload.message }
 
     default:
       return state

@@ -10,6 +10,8 @@ const Idea = props => {
     sourceBtnClass = 'btn-warning'
   } else if (props.idea.source.includes('RFS 100 newsletter')) {
     sourceBtnClass = 'btn-primary'
+  } else if (props.idea.source.includes('User submission')) {
+    sourceBtnClass = 'btn-dark'
   }
 
   return (

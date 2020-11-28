@@ -51,7 +51,8 @@ kbd {
 /* style all source link buttons */
 a.btn-info:link,
 a.btn-primary:link,
-a.btn-warning:link {
+a.btn-warning:link,
+a.btn-dark:link {
   font-size: 1rem;
   font-weight: 700;
   padding: 2rem;
@@ -64,7 +65,8 @@ a.btn-warning:hover { background-color: #ece159; }
 
 .btn-info,
 .btn-primary,
-.btn-warning {
+.btn-warning,
+.btn-dark {
   border-radius: 0.2rem;
 }
 

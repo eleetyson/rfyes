@@ -63,6 +63,7 @@ class IdeasIndex extends Component {
             <option value="twitter">Twitter threads</option>
             <option value="rfs">RFS 100 newsletter</option>
             <option value="mfm">My First Million podcast</option>
+            <option value="user">User submission</option>
           </select>
         </form>
 

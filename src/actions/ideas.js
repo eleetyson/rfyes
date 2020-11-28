@@ -38,7 +38,7 @@ export function fetchIdea() {
 
 }
 
-// creating an idea (TODO)
+// creating an idea with user form submission
 export function addIdea(idea) {
 
   const options = {
@@ -47,16 +47,15 @@ export function addIdea(idea) {
     body: JSON.stringify({idea})
   }
 
+  return (dispatch) => {
   fetch(`${URL}/ideas`, options)
-  // return (dispatch) => {
-  //   fetch(`${URL}/ideas`, options)
-  //   .then(response => response.json())
-  //   .then(idea => dispatch({ type: 'ADD_IDEA', payload: idea }) )
-  // }
+    .then(response => response.json())
+    .then(message => dispatch({ type: 'ADD_IDEA', payload: message }) )
+  }
 
 }
 
-// clearing out ideas from state
+// clearing out state
 export function resetIdeas() {
   return (dispatch) => {
     dispatch({ type: 'LOADING' })

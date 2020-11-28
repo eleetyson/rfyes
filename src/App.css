@@ -14,11 +14,15 @@ body {
   background-color: #f3f3f3;
   font-family: 'PT Serif', serif;
   font-size: 0.9rem;
+  animation: fadeInAnimation 1s ease forwards;
 }
 
-nav {
-  font-size: 1.1rem;
+@keyframes fadeInAnimation {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
+
+nav { font-size: 1.1rem; }
 
 /* style cards for ideas */
 .box-shadow {

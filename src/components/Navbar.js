@@ -22,5 +22,3 @@ const Navbar = () => {
 }
 
 export default Navbar
-
-// <img src="/logo.png" height="25" width="25" alt="RF Yes logo"></img>

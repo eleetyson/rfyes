@@ -14,7 +14,7 @@ const Navbar = () => {
       <div className="navbar-nav ml-auto flex-row">
         <NavLink exact to="/" className="nav-link pr-3" activeClassName="nav-item active">Generator</NavLink>
         <NavLink exact to="/all" className="nav-link px-3" activeClassName="nav-item active">Index</NavLink>
-        <NavLink to="/about" className="nav-link pr-xl-5 pr-lg-5 pr-md-5 pr-sm-1 pr-xs-1  mr-xl-5 mr-lg-5 mr-md-5  pl-xl-3 pl-lg-3 pl-md-3" activeClassName="nav-item active">About</NavLink>
+        <NavLink exact to="/about" className="nav-link pr-xl-5 pr-lg-5 pr-md-5 pr-sm-1 pr-xs-1  mr-xl-5 mr-lg-5 mr-md-5  pl-xl-3 pl-lg-3 pl-md-3" activeClassName="nav-item active">About</NavLink>
       </div>
     </nav>
   )

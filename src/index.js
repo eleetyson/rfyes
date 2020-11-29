@@ -19,10 +19,10 @@ const store = createStore(
 // wrap top-level App component so all child components can access redux store
 // wrap everything with router
 ReactDOM.render(
-  <HashRouter basename={process.env.PUBLIC_URL}>
+  <Router basename={process.env.PUBLIC_URL}>
     <Provider store={store}>
       <App />
     </Provider>
-  </HashRouter>,
+  </Router>,
   document.getElementById('root')
 )

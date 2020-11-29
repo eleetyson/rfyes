@@ -25,7 +25,6 @@ body {
 
 /* styling navbar */
 nav { font-size: 1rem; }
-
 strong { color: white; }
 
 /* style cards for ideas */
@@ -48,6 +47,7 @@ p.card-text,
 p.lead {
   font-size: 0.9rem;
   letter-spacing: 0.25px;
+  line-height: 1.4rem;
 }
 
 /* styling keyboard shortcut instruction */

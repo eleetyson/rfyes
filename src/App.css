@@ -24,7 +24,7 @@ body {
 }
 
 /* styling navbar */
-nav { font-size: 0.9rem; }
+nav { font-size: 1rem; }
 
 strong { color: white; }
 
@@ -83,7 +83,10 @@ a.btn-dark:link {
 }
 
 /* styling select dropdown */
-select.form-control,
+select.form-control {
+  font-size: 0.8rem;
+}
+
 .form-inline label {
   font-size: 0.8rem;
 }

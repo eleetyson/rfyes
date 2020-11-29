@@ -10,6 +10,7 @@ body {
   width: 100%;
 }
 
+/* styling page fade in animation */
 body {
   background-color: #f3f3f3;
   font-family: 'PT Serif', serif;
@@ -22,6 +23,7 @@ body {
   100% { opacity: 1; }
 }
 
+/* styling navbar */
 nav { font-size: 1.1rem; }
 
 span { color: white; }

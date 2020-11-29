@@ -14,15 +14,23 @@ body {
   background-color: #f3f3f3;
   font-family: 'PT Serif', serif;
   font-size: 0.9rem;
-  animation: fadeInAnimation 1s ease forwards;
+  animation: fadeIn 1s ease;
 }
 
-@keyframes fadeInAnimation {
+@keyframes fadeIn {
   0% { opacity: 0; }
   100% { opacity: 1; }
 }
 
 nav { font-size: 1.1rem; }
+
+span { color: white; }
+
+mark {
+  background: #da552f;
+  border-radius: 1em 0;
+  padding: .5rem;
+}
 
 /* style cards for ideas */
 .box-shadow {

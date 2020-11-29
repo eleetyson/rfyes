@@ -1,4 +1,4 @@
-const URL = 'http://rfyes.herokuapp.com'
+const URL = 'https://rfyes.herokuapp.com'
 
 // fetching all ideas to render on index page
 // display loading state until fetch successful

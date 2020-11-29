@@ -9,4 +9,4 @@ None of these ideas are my own. They're from [RFS 100 newsletters](https://rfs10
 ### Credit
 This frontend is written in React and uses Redux for state management. The backend is a simple Rails API with a Postgres database, hosted on Heroku. The loading animations are courtesy of Bryan Vogel via [LottieFiles](https://lottiefiles.com/).
 
-\*To see the backend repo for this application, head over to https://github.com/eleetyson/rfyes-backend\*
+\*To see the backend repo for this application, head over to <https://github.com/eleetyson/rfyes-backend>\*

@@ -64,7 +64,7 @@ class Generator extends Component {
 
   render() {
     return (
-      <div className="container col-xl-8 col-lg-10 col-md-10 col-sm-10 col-xs-10  offset-2  py-5 my-5">
+      <div className="container col-xl-8 col-lg-10 col-md-10 col-sm-10 col-xs-10  offset-2  py-5 my-4">
         {this.renderContentConditional()}
         <Instruction active={this.state.active} />
       </div>

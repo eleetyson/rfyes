@@ -85,7 +85,7 @@ a.btn-dark:link {
 /* styling select dropdown */
 select.form-control,
 .form-inline label {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 
 a.btn-info:hover { background-color: #0d95e8; }

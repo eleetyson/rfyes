@@ -15,7 +15,7 @@ body {
   background-color: #f3f3f3;
   font-family: 'PT Serif', serif;
   font-size: 0.9rem;
-  animation: fadeIn 1s ease;
+  animation: fadeIn 1.5s ease;
 }
 
 @keyframes fadeIn {
@@ -26,13 +26,7 @@ body {
 /* styling navbar */
 nav { font-size: 1.1rem; }
 
-span { color: white; }
-
-mark {
-  background: #da552f;
-  border-radius: 1em 0;
-  padding: .5rem;
-}
+strong { color: white; }
 
 /* style cards for ideas */
 .box-shadow {
@@ -96,7 +90,6 @@ a.btn-warning:hover { background-color: #ece159; }
 /* style about page links */
 p a:hover {
   text-decoration: none;
-  /* color: #00a6ff; */
 }
 
 /* styling form for idea submission */

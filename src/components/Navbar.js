@@ -1,11 +1,14 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import { RoughNotation } from "react-rough-notation"
 
 const Navbar = () => {
   return (
     <nav className="navbar navbar-light bg-white border-bottom">
       <NavLink to="/" className="navbar-brand pl-xl-5 pl-lg-5 pl-md-5 pl-sm-1 pl-xs-1  ml-xl-3 ml-lg-3 ml-md-3">
-         <mark><span>RFY</span></mark>
+         <RoughNotation type="highlight" color="#da552f" iterations="4" strokeWidth="3" animationDelay="1400" show="true">
+           <strong>Request For Yes</strong>
+         </RoughNotation>
       </NavLink>
 
       <div className="navbar-nav ml-auto flex-row">

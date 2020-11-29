@@ -50,7 +50,7 @@ class IdeasIndex extends Component {
 
   render() {
     return (
-      <div className="container col-xl-9 col-lg-10 col-md-10 col-sm-10 col-xs-10  offset-2  py-4 my-xl-4 my-lg-4 my-md-4 my-sm-3 my-xs-3">
+      <div className="container col-xl-8 col-lg-10 col-md-10 col-sm-10 col-xs-10  offset-2  py-4 my-xl-4 my-lg-4 my-md-4 my-sm-3 my-xs-3">
 
         <form className="form-inline justify-content-end w-75 mb-5">
           <label className="pr-2">Filter: </label>

@@ -5,7 +5,8 @@ import { createStore, applyMiddleware, compose } from 'redux'
 import ideasReducer from './reducers/ideasReducer'
 import { composeWithDevTools } from 'redux-devtools-extension'
 import thunk from 'redux-thunk'
-import { HashRouter } from 'react-router-dom'
+import { BrowserRouter as Router } from 'react-router-dom'
+// import { HashRouter } from 'react-router-dom'
 import { Provider } from 'react-redux'
 
 // creating redux store using the ideas reducer
@@ -18,10 +19,10 @@ const store = createStore(
 // wrap top-level App component so all child components can access redux store
 // wrap everything with router
 ReactDOM.render(
-  <HashRouter basename={process.env.PUBLIC_URL}>
+  <Router basename={process.env.PUBLIC_URL}>
     <Provider store={store}>
       <App />
     </Provider>
-  </HashRouter>,
+  </Router>,
   document.getElementById('root')
 )

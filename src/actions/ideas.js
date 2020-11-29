@@ -9,6 +9,7 @@ export function fetchIdeas() {
   fetch(`${URL}/ideas`)
     .then(response => response.json())
     .then(ideas => dispatch({ type: 'SHOW_IDEAS', payload: ideas }) )
+    .catch(err => alert("An unexpected error occurred."))
   }
 
 }
@@ -21,7 +22,7 @@ export function fetchFilteredIdeas(type = 'all') {
   fetch(`${URL}/${type}`)
     .then(response => response.json())
     .then(ideas => dispatch({ type: 'SHOW_IDEAS', payload: ideas }) )
-    // .catch(err => alert())
+    .catch(err => alert("An unexpected error occurred."))
   }
 
 }
@@ -35,6 +36,7 @@ export function fetchIdea() {
   fetch(`${URL}/`)
     .then(response => response.json())
     .then(idea => dispatch({ type: 'SHOW_IDEA', payload: idea }) )
+    .catch(err => alert("An unexpected error occurred."))
   }
 
 }
@@ -52,6 +54,7 @@ export function addIdea(idea) {
   fetch(`${URL}/ideas`, options)
     .then(response => response.json())
     .then(message => dispatch({ type: 'ADD_IDEA', payload: message }) )
+    .catch(err => alert("An unexpected error occurred."))
   }
 
 }

@@ -75,4 +75,6 @@ const mapStateToProps = ({ ideas, loading }) => {
   return { ideas, loading }
 }
 
+// connecting component to redux store
+// redux state and these 3 action creators will be available through props
 export default connect(mapStateToProps, {fetchIdeas, fetchFilteredIdeas, resetIdeas})(IdeasIndex)

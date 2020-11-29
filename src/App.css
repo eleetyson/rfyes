@@ -14,7 +14,7 @@ body {
 body {
   background-color: #f3f3f3;
   font-family: 'PT Serif', serif;
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   animation: fadeIn 1.5s ease;
 }
 
@@ -24,7 +24,7 @@ body {
 }
 
 /* styling navbar */
-nav { font-size: 1.1rem; }
+nav { font-size: 0.9rem; }
 
 strong { color: white; }
 

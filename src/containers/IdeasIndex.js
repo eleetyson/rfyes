@@ -59,7 +59,6 @@ class IdeasIndex extends Component {
             <option value="twitter">Twitter threads</option>
             <option value="rfs">RFS 100 newsletter</option>
             <option value="mfm">My First Million podcast</option>
-            <option value="user">User submission</option>
           </select>
         </form>
 
@@ -78,3 +77,6 @@ const mapStateToProps = ({ ideas, loading }) => {
 // connecting component to redux store
 // redux state and these 3 action creators will be available through props
 export default connect(mapStateToProps, {fetchIdeas, fetchFilteredIdeas, resetIdeas})(IdeasIndex)
+
+
+// <option value="user">User submission</option>

@@ -6,7 +6,7 @@ I assembled this collection of requests for startups and side project ideas to k
 
 None of these ideas are my own. They're from [RFS 100 newsletters](https://rfs100.substack.com/), [My First Million podcasts](https://thehustle.co/my-first-million-podcast/), disparate Twitter threads, and maybe you. Feel free to [email me](mailto:eleetyson@gmail.com?subject=👋) suggestions and I'll get them added.
 
-This app is live at <https://eleetyson.github.io/rfyes> and a brief demo of it is available [here](https://www.loom.com/share/373112a1953945da8eb6c6236a1ae6b6).
+This app is live at <https://rfyes.com> and a brief demo of it is available [here](https://www.loom.com/share/373112a1953945da8eb6c6236a1ae6b6).
 
 ### Credit
 This frontend is written in React and uses Redux for state management. The backend is a simple Rails API with a Postgres database, hosted on Heroku. The loading animations are courtesy of Bryan Vogel via [LottieFiles](https://lottiefiles.com/). Shoutout to Preet Shihn for his work on [Rough Notation](https://roughnotation.com/) -- I used its React wrapper to create a simple highlighter animation.

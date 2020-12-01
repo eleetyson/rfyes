@@ -1,4 +1,4 @@
-[![click to watch full RF Yes demo](src/animations/demo.gif)](https://www.loom.com/share/373112a1953945da8eb6c6236a1ae6b6)
+[![click to watch full RF Yes demo](src/animations/demo.gif)](https://www.loom.com/share/e609af705f664ea4a52f026cb6a597fa)
 
 When we're stuck in a rut, one way out is to change our environment. This could mean our physical environment (going outside) or our digital environment (consuming something different).
 

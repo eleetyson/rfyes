@@ -77,6 +77,3 @@ const mapStateToProps = ({ ideas, loading }) => {
 // connecting component to redux store
 // redux state and these 3 action creators will be available through props
 export default connect(mapStateToProps, {fetchIdeas, fetchFilteredIdeas, resetIdeas})(IdeasIndex)
-
-
-// <option value="user">User submission</option>
